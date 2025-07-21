@@ -1,11 +1,16 @@
 function tweakdates() {
-    var date_salonique=new Date('2021','02','01'); //months are minus 1 because range is from 0 to 11 
-    var date_kuehne=new Date('2022','05','02'); //months are minus 1 because range is from 0 to 11 
-    var date_metron=new Date('2022','11','28'); //months are minus 1 because range is from 0 to 11 
+    var date_salonique_begin=new Date('2021','02','01'); //months are minus 1 because range is from 0 to 11 
+    var date_salonique_end=new Date('2025','05','01'); //months are minus 1 because range is from 0 to 11 
+    var date_kuehne_begin=new Date('2022','05','02'); //months are minus 1 because range is from 0 to 11
+    var date_kuehne_end=new Date('2022','11','27'); //months are minus 1 because range is from 0 to 11 
+    var date_metron_begin=new Date('2022','11','28'); //months are minus 1 because range is from 0 to 11
+    var date_metron_end=new Date('2024','12','31'); //months are minus 1 because range is from 0 to 11 
+    var date_classter_begin=new Date('2025','1','7'); //months are minus 1 because range is from 0 to 11 
     var datenow = new Date();
-    document.getElementById("datecalc1").innerHTML+=calculate(datenow,date_salonique);
-    document.getElementById("datecalc2").innerHTML+=calculate(new Date('2022','11','27'),date_kuehne);
-    document.getElementById("datecalc3").innerHTML+=calculate(datenow,date_metron);
+    document.getElementById("datecalc1").innerHTML+=calculate(date_salonique_end, date_salonique_begin);
+    document.getElementById("datecalc2").innerHTML+=calculate(date_kuehne_end, date_kuehne_begin);
+    document.getElementById("datecalc3").innerHTML+=calculate(date_metron_end, date_metron_begin);
+    document.getElementById("datecalc4").innerHTML+=calculate(datenow, date_classter_begin);
     getAge();
   }
 
